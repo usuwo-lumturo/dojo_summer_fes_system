@@ -1,0 +1,5 @@
+FROM python:slim-bookworm
+WORKDIR /app
+
+RUN pip install fastapi "uvicorn[standard]" redis
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0"]
