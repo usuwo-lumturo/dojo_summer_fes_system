@@ -1,5 +1,6 @@
 <template>
   <v-app id="inspire">
+      <v-img src="../assets/bg.png">
       <v-row>
         <v-col cols="4">
           <v-container class="d-flex">
@@ -106,6 +107,7 @@
         <div class="flex-grow-1"></div>
         <div class="font-weight-thin">&copy; {{ new Date().getFullYear() }} さいたま市 桜区 道場囃子連 電脳処</div>
       </v-footer>
+    </v-img>
   </v-app>
 </template>
 
