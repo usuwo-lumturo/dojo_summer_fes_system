@@ -1,17 +1,6 @@
 <template>
   <v-container class="fill-height" max-width="900">
     <div>
-      <v-img
-        class="mb-4"
-        height="150"
-        src="@/assets/logo.png"
-      />
-
-      <div class="mb-8 text-center">
-        <div class="text-body-2 font-weight-light mb-n1">Welcome to</div>
-        <h1 class="text-h2 font-weight-bold">Vuetify</h1>
-      </div>
-
       <v-row>
         <v-col cols="12">
           <v-card
@@ -22,29 +11,16 @@
             rounded="lg"
             variant="tonal"
           >
-            <template #image>
-              <v-img position="top right" />
-            </template>
-
-            <template #title>
-              <h2 class="text-h5 font-weight-bold">
-                Get started
-              </h2>
-            </template>
-
-            <template #subtitle>
-              <div class="text-subtitle-1">
-                Change this page by updating <v-kbd>{{ `<HelloWorld />` }}</v-kbd> in <v-kbd>components/HelloWorld.vue</v-kbd>.
-              </div>
-            </template>
+          <v-card-title>道場地区 御神輿位置情報登録用サイト</v-card-title>
+          <v-card-text>そういうやつです</v-card-text>
           </v-card>
         </v-col>
         <v-col>
           <v-card>
             <v-card-title>位置情報</v-card-title>
             <v-card-text>
-              <p> いど:{{ current.lat }}</p>
-              <p> けいど:{{ current.lng }}</p>
+              <p> 緯度(latitude):{{ current.lat }}</p>
+              <p> 経度(longitude):{{ current.lng }}</p>
               <GoogleMap
                 :api-key="apikey"
                 :center="dashiCenter"
@@ -90,7 +66,7 @@
           },
       })
 
-  const connection = new WebSocket('wss://dojopostion.marpyong.work/ws')
+  const connection = new WebSocket('wss://dojopositon.marpyong.work/ws')
 
   const getLocateAndSend = () => {
       current.value.getLocation() // 定期的に位置情報を更新

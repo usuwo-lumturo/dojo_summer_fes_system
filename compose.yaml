@@ -48,7 +48,7 @@ services:
       - ./node-app:/node-app
 
   mainweb:
-    container_name: nodejs
+    container_name: web
     build: 
       context: .
       dockerfile: Dockerfile4

@@ -62,10 +62,13 @@ export default defineConfig({
   },
   server: {
     host: true,
-    cors: {
-      origin: ['*']
-    },
-    allowedHosts: ["dojosummer.marpyong.work"],
+    cors: true,
+    origin: 'https://dojo-summer.marpyong.work/',
+    allowedHosts: [
+      "dojosummer.marpyong.work",
+      "dojo-summer.marpyong.work",
+      "gpsapi.marpyong.work",
+    ],
     port: 3000,
   },
   css: {
