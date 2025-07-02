@@ -1,6 +1,6 @@
 <template>
   <v-app id="inspire">
-      <v-img src="../assets/bg.png">
+      <v-parallax src="../assets/bg.png" position="right top">
       <v-row>
         <v-col cols="4">
           <v-container class="d-flex">
@@ -15,7 +15,7 @@
               </v-btn>
             </v-badge>
           </v-container>
-        </v-col>       
+        </v-col>
         <v-col cols="8">
           <v-container class="algin-right">
             <p class="text-right text-body-2">さいたま市 桜区 道場自治会</p>
@@ -54,14 +54,14 @@
                 <v-card-text>
                   <p>YouTubeにて、山車からの様子を配信しています。</p>
                   <p>※ 限定公開ですので必要以上の拡散は控えていただくようにお願いします。</p>
-                  <iframe 
-                    width="100%" 
-                    height="473" 
-                    src="https://www.youtube.com/embed/Blf-ZH2RIh8?si=h5OZGFj32GUxuLbx" 
-                    title="YouTube video player" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerpolicy="strict-origin-when-cross-origin" 
+                  <iframe
+                    width="100%"
+                    height="473"
+                    src="https://www.youtube.com/embed/Blf-ZH2RIh8?si=h5OZGFj32GUxuLbx"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
                     allowfullscreen></iframe>
                 </v-card-text>
               </v-card>
@@ -79,7 +79,7 @@
             </div>
           </v-col>
         </v-row>
-        <v-card class="ma-6">
+        <!-- <v-card class="ma-6">
           <v-card-title>巡回経路</v-card-title>
           <v-card-text>
             <p>このような経路で巡回をする予定です。</p>
@@ -101,13 +101,13 @@
                   <Polyline :options="dashiPath" />
                 </GoogleMap>
           </v-card-text>
-        </v-card>
+        </v-card> -->
       </v-main>
       <v-footer app height="40">
         <div class="flex-grow-1"></div>
         <div class="font-weight-thin">&copy; {{ new Date().getFullYear() }} さいたま市 桜区 道場囃子連 電脳処</div>
       </v-footer>
-    </v-img>
+    </v-parallax>
   </v-app>
 </template>
 
